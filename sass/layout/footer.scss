@@ -1,0 +1,35 @@
+@use "../utils/colors";
+@use "../utils/variables";
+
+footer {
+background-color: colors.$dark;
+padding: 2rem;
+color: white;
+@media (min-width: variables.$breakpoint2) {
+    display: grid;
+    place-items: center;
+}
+h3 {
+    font-family: "shrikhand", sans-serif;
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+}
+p {
+margin: 0.5rem 0 0.2rem 0;
+}
+.fa-utensils:before {
+    padding: 0 1rem 0 0;
+    font-size: small;
+}
+.fa-handshake-angle:before {
+    padding: 0 0.8rem 0 0;
+    font-size: small;
+}
+
+}
+
+
+
+//i {
+   // padding: 0 1rem 0 0;
+//}

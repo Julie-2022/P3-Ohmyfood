@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!--Viewport-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <!-- google font Texte : Roboto -->
+    <!--  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <!- Google font logo + titres : Shrikhand -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  -->
+    <!-- Place your kit's code here / intégration FontAwesome pour les icones -->
+    <script
+      src="https://kit.fontawesome.com/ef26cf91c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--  <link rel="stylesheet"
+       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> -->
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Ohmyfood</title>
+  </head>
+
+  <body>
+    <!-- spinner -->
+    <div class="loader">
+      <!--  <i class="fas fa-circle-notch fa-spin fa-3x fa-spin"></i>  -->
+      <!--<i class="fas fa-circle-notch fa-3x"></i> -->
+    </div>
+    <!-- logo -->
+    <header>
+      <h1>ohmyfood</h1>
+    </header>
+    <!-- Localisation -->
+    <main>
+      <div class="location">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Paris, Belleville</p>
+      </div>
+      <section class="explorer">
+        <div class="backgrey">
+          <h2>Réservez le menu qui<br />vous convient</h2>
+          <h3>
+            Découvrez des restaurants d'exception, <br />
+            selectionnés par nos soins
+          </h3>
+          <button class="button">
+            <p>Explorer nos restaurants</p>
+          </button>
+        </div>
+      </section>
+      <section class="blockfonction">
+        <h2>Fonctionnement</h2>
+        <div class="fonctioning flexwrap flexcenter">
+          <div>
+            <div class="icon bordericon flexcenter">1</div>
+            <div class="buttonf flexstart">
+              <div class="sizeicon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <p>Choisissez un restaurant</p>
+            </div>
+          </div>
+          <div>
+            <div class="icon bordericon flexcenter">2</div>
+            <div class="buttonf flexstart">
+              <div class="sizeicon"><i class="fa-solid fa-list"></i></div>
+              <p>Composez votre menu</p>
+            </div>
+          </div>
+          <div>
+            <div class="icon bordericon flexcenter">3</div>
+            <div class="buttonf flexstart">
+              <div class="sizeicon">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <p>Dégustez au restaurant</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="restaurants">
+        <h2>Restaurants</h2>
+        <div class="blockrestau">
+          <a href="./sass/pages/restau-1.html" class="card new">
+            <div class="card__img card__img-1"></div>
+            <div class="card__details flexstart flexbetween">
+              <div>
+                <div class="sizetext">La palette du goût</div>
+                <div>Ménilmontant</div>
+              </div>
+              <div>
+                <i class="fa-thin fa-heart"></i>
+              </div>
+            </div>
+          </a>
+          <a href="./sass/pages/restau-2.html" class="card new">
+            <div class="card__img card__img-2"></div>
+            <div class="card__details flexstart flexbetween">
+              <div>
+                <div class="sizetext">La note enchantée</div>
+                <div>Charonne</div>
+              </div>
+              <div>
+                <i class="fa-thin fa-heart"></i>
+              </div>
+            </div>
+          </a>
+          <a href="./sass/pages/restau-3.html" class="card">
+            <div class="card__img card__img-3"></div>
+            <div class="card__details flexstart flexbetween">
+              <div>
+                <div class="sizetext">À la française</div>
+                <div>Cité Rouge</div>
+              </div>
+              <div>
+                <i class="fa-thin fa-heart"></i>
+              </div>
+            </div>
+          </a>
+          <a href="./sass/pages/restau-4.html" class="card">
+            <div class="card__img card__img-4"></div>
+            <div class="card__details flexstart flexbetween">
+              <div>
+                <div class="sizetext">Le Délice des sens</div>
+                <div>Folie-Méricourt</div>
+              </div>
+              <div>
+                <i class="fa-thin fa-heart"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h3>ohmyfood</h3>
+      <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
+      <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
+      <p>Mentions légales</p>
+      <a href="mailto:julyzebda@gmail.com">Contact</a>
+    </footer>
+  </body>
+</html>

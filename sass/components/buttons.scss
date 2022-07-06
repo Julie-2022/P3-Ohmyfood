@@ -1,0 +1,47 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+@use "../utils/colors";
+
+
+// Explorer
+@mixin button {
+    color: white;
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+    border: none;
+    border-radius: 2rem;
+    
+    & p {
+        font-size: 1rem;
+        font-weight: lighter;
+    }
+    @include mixins.gradient;
+    @include mixins.shad;
+    &:hover {
+        @include mixins.hover-explorer;
+        
+    }
+}
+// Fonctioning
+@mixin buttonf {
+    align-items: center;
+    gap: 1.5 * variables.$fonctioning-dim;
+    width: 18 * variables.$fonctioning-dim;
+    height: 3.5 * variables.$fonctioning-dim;
+    padding: 0 2 * variables.$fonctioning-dim;
+    margin: 1.5 * variables.$fonctioning-dim 1 * variables.$fonctioning-dim;
+    border: 1px solid transparent;
+    border-radius: 1 * variables.$fonctioning-dim;
+    background-color: #F6F6F6;
+    transition: 300ms;
+    @include mixins.shad;   
+    &:hover {
+        @include mixins.hover-light;
+        @include mixins.shad-light;
+        i::before {
+            color: colors.$purple;
+        }
+    }
+}
+
+
