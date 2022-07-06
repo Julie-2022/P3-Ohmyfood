@@ -4,7 +4,7 @@
   "description": "Projet 3 Openclassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch style.scss style.css ",
+    "sass": "sass --watch sass/style.scss styles/style.css ",
     "prefix": "postcss style.css --use autoprefixer"
   },
   "repository": {
@@ -18,12 +18,10 @@
     "url": "https://github.com/Julie-2022/Ohmyfood/issues"
   },
   "homepage": "https://github.com/Julie-2022/Ohmyfood#readme",
-  "devDependencies": {
-    "sass": "^1.53.0"
-  },
   "dependencies": {
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
-    "postcss-cli": "^9.1.0"
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.53.0"
   }
 }

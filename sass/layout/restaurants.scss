@@ -67,7 +67,7 @@ body {
    
     @for $i from 1 through 4 {
        &__img-#{$i} {
-        background-image: url(../../assets/card-#{$i}.jpg);
+        background-image: url(../../img/card-#{$i}.jpg);
         background-position: center 60%;
         }   
     }
