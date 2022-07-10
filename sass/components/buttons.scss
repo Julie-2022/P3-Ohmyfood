@@ -6,13 +6,13 @@
 // Explorer
 @mixin button {
     color: white;
-    padding: 0 2rem;
-    margin-bottom: 4rem;
+    padding: 0 2 * variables.$dim;
+    margin: 1 * variables.$dim 0 3 * variables.$dim 0;
     border: none;
-    border-radius: 2rem;
+    border-radius: 2 * variables.$dim;
     
     & p {
-        font-size: 1rem;
+        font-size: 1 * variables.$dim;
         font-weight: lighter;
     }
     @include mixins.gradient;
@@ -25,13 +25,13 @@
 // Fonctioning
 @mixin buttonf {
     align-items: center;
-    gap: 1.5 * variables.$fonctioning-dim;
-    width: 18 * variables.$fonctioning-dim;
-    height: 3.5 * variables.$fonctioning-dim;
-    padding: 0 2 * variables.$fonctioning-dim;
-    margin: 1.5 * variables.$fonctioning-dim 1 * variables.$fonctioning-dim;
+    gap: 1.5 * variables.$dim;
+    width: 18 * variables.$dim;
+    height: 3.5 * variables.$dim;
+    padding: 0 2 * variables.$dim;
+    margin: 1.5 * variables.$dim 1 * variables.$dim;
     border: 1px solid transparent;
-    border-radius: 1 * variables.$fonctioning-dim;
+    border-radius: 1 * variables.$dim;
     background-color: #F6F6F6;
     transition: 300ms;
     @include mixins.shad;   

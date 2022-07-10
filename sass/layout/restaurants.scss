@@ -60,7 +60,6 @@ body {
     &__img {
         width: 100%;
         height:75%;
-       // height: 11rem;
         border-radius: 1rem 1rem 0 0;
         background-size: cover; 
     } 
@@ -85,22 +84,14 @@ body {
         }
 
     .fa-thin {
-        @include mixins.heart;
         bottom: 20px;
         padding-right: 0;
-      //  @media (min-width: variables.$breakpoint3) {
-      //      bottom: 2.5rem;
-      //      padding-right: 1rem;
-      //  }
-        &:hover {
-        @include mixins.heart ($opacity: 0, $font-weight: 900, $color: transparent);
-        @include mixins.hover-heart;
-        @include mixins.gradient;
+        @include mixins.heart-filled;
+       
+        }
     }
 }
-}
-}    
-        
+ 
 .new {
     position: relative;
 }
@@ -117,5 +108,5 @@ body {
     place-items: center;
     right: 1rem;
     top: 1rem;
-    
+    transition: 0.5s;
 }

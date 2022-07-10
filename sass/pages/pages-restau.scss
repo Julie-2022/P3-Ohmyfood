@@ -55,12 +55,8 @@ header {
 
 .fa-thin {
     padding-right: 10%;
-    @include mixins.heart;
-    &:hover {
-    @include mixins.heart ($opacity: 0, $font-weight: 900, $color: transparent);
-    @include mixins.hover-heart;
-    @include mixins.gradient;
-}
+    @include mixins.heart-filled;
+    
 }
 
 .restau-main {
@@ -115,7 +111,7 @@ header {
             }
             display: flex;
             background-color: white;
-            border-radius: 1 * variables.$fonctioning-dim;
+            border-radius: variables.$dim;
             margin: 2rem 0.5rem;
             overflow: hidden;
             @include mixins.shad;
@@ -123,12 +119,12 @@ header {
             .menu-item__price {
                 margin-left: auto;
                 font-weight: 900;
-                padding: 1rem;
+                padding: variables.$dim;
                 display: flex;
                 align-items: flex-end;
             }
             .menu-item__description {
-                padding: 1rem;
+                padding: variables.$dim;
                 overflow: hidden;
                 h4,
                 p {
@@ -139,9 +135,9 @@ header {
 
                 }
                 .menu-item__check {
+                    $check-width: 4rem;
                     display: grid;
                     place-items: center;
-                    $check-width: 4rem;
                     width: $check-width;
                     flex-shrink: 0;
                     border-radius: 0 1rem 1rem 0;

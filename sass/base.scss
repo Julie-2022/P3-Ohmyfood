@@ -36,10 +36,8 @@ a {
     color: inherit;
 }
 
-
-
 /* Général */
-
+/* FLLEXBOX */
 .flexstart {
     display: flex;
     justify-content: flex-start;
@@ -51,44 +49,10 @@ a {
     align-items: center;
 }
 
-.flexend {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.flexaround {
-    display: flex;
-    justify-content: space-around;
-}
-
 .flexbetween {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.flexcolumncenter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.flexcolumn {
-    display: flex;
-    align-items: flex-start;
-}
-
-.flexcolumnaround {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.flexcolumnbetween {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .flexwrap {
@@ -96,42 +60,9 @@ a {
     flex-wrap: wrap;
 }
 
-.alignitems {
-    display: flex;
-    align-items: center;
-}
-
-
 /* Couleurs et styles généraux */
 .sizetext {
     font-weight: 700;
 }
 
-.decorationNone {
-    text-decoration: none;
-}
-
-.bordernone {
-    border: none;
-}
-
-.colorpurple {
-    color: #9356DC;
-}
-
-.colorpink {
-    color: #FF79DA;
-}
-
-.colorgrey {
-    color: #7E7E7E;
-}
-
-.colorblack {
-    color: #1C1C1C;
-}
-
-.backgrey {
-    background-color: #F6F6F6;
-}
 

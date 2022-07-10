@@ -4,35 +4,35 @@
 @use "../components/buttons";
 
 .blockfonction {
-    padding-bottom: 2rem;
+    padding-bottom: 2 * variables.$dim;
   h2 {
-    padding-left: 2rem;
+    padding-left: 2 * variables.$dim;
     }  
 }
 
 .fonctioning {
-    column-gap: 2rem;
+    column-gap: 2 * variables.$dim;
     & .buttonf {
         @include buttons.buttonf;
         @include mixins.shad;  
        } 
     & .icon {
-    border-radius: 2 * variables.$fonctioning-dim;
+    border-radius: 2 * variables.$dim;
     /* cercle */
-    width: 1.5 * variables.$fonctioning-dim;
+    width: 1.5 * variables.$dim;
     /* bordure */
-    height: 1.5 * variables.$fonctioning-dim;
+    height: 1.5 * variables.$dim;
     color: white;
     background-color: colors.$purple;
-    margin: 2.5 * variables.$fonctioning-dim 0;
-    font-size: variables.$fonctioning-dim ;
+    margin: 2.5 * variables.$dim 0;
+    font-size: variables.$dim ;
     float: left;
     position: absolute;
     border: 1px solid transparent; //*
     }
 & i {
     color: colors.$grey;
-    font-size: 1.2 variables.$fonctioning-dim ;
-    padding: 1.5 * variables.$fonctioning-dim 0;
+    font-size: 1.2 variables.$dim ;
+    padding: 1.5 * variables.$dim 0;
 }
 }
