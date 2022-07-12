@@ -12,6 +12,7 @@
     border-radius: 2 * variables.$dim;
     
     & p {
+        margin: 1rem 0;
         font-size: 1 * variables.$dim;
         font-weight: lighter;
     }
@@ -24,9 +25,11 @@
 }
 // Fonctioning
 @mixin buttonf {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     gap: 1.5 * variables.$dim;
-    width: 18 * variables.$dim;
+    max-width: 18 * variables.$dim;
     height: 3.5 * variables.$dim;
     padding: 0 2 * variables.$dim;
     margin: 1.5 * variables.$dim 1 * variables.$dim;
@@ -39,7 +42,7 @@
         @include mixins.hover-light;
         @include mixins.shad-light;
         i::before {
-            color: colors.$purple;
+            color: colors.$primary;
         }
     }
 }

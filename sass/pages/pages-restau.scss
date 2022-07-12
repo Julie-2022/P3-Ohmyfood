@@ -1,4 +1,3 @@
-
 @use "../utils/mixins";
 @use "../utils/anim";
 @use "../utils/variables";
@@ -6,179 +5,181 @@
 @use "../components/buttons";
 
 #page-restau {
-
-header {
+  header {
     &::before {
-        @include mixins.icon-fontA ($font-weight: 900);
-        content: "\f060";
-        font-size: x-large;
-        left: 10%;
-        top: 3rem;
-        position: absolute;
-        transform: translateY(-40%);
-        transition: transform 0.5s;
-        @media (max-width:variables.$breakpoint) {
-            left: 5%;
-        }
+      @include mixins.icon-fontA($font-weight: 900);
+      content: "\f060";
+      font-size: x-large;
+      left: 10%;
+      top: 3rem;
+      position: absolute;
+      transform: translateY(-40%);
+      transition: transform 0.5s;
+      @media (max-width: variables.$breakpoint) {
+        left: 5%;
+      }
     }
     &:hover::before {
-    font-size: 1.7rem;
-    @include mixins.hover-explorer ($transformScale: translateY(-50%));    
+      font-size: 1.7rem;
+      @include mixins.hover-explorer($transformScale: translateY(-50%));
     }
-  
-    }
+  }
 }
 
 .banner img {
-    position: relative;
-    width: 100%;
-    max-height: 25rem;
-    object-fit: cover;
-    object-position: center 60%;
-    overflow: hidden;
-@media (max-width: 500px) {
+  position: relative;
+  width: 100%;
+  max-height: 25rem;
+  object-fit: cover;
+  object-position: center 60%;
+  overflow: hidden;
+  @media (max-width: 500px) {
     max-height: 300px;
-    }
+  }
 }
 
-.restau-head { 
-    position: relative;
-    width: 100%;
-    background-color: colors.$lightgrey;
-    border-radius: 3rem 3rem 0 0;
-    margin-top: -3rem;
-    h2 {
+.restau-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background-color: lighten(colors.$grey, 45);
+  border-radius: 3rem 3rem 0 0;
+  margin-top: -3rem;
+  h2 {
     font-family: "Shrikhand", "cursive";
     padding: 2rem;
+  }
 }
-}   
 
 .fa-thin {
-    padding-right: 10%;
-    @include mixins.heart-filled;
-    
+  padding-right: 10%;
+  @include mixins.heart-filled;
 }
 
 .restau-main {
-    background-color: colors.$lightgrey;
-    @media (max-width:variables.$breakpoint) {
-        padding: 1rem;
-    }
-    @media all and (min-width: variables.$breakpoint) and (max-width: $breakpoint2) {
-        padding: 0 4rem;
-    }
-    @media (min-width: variables.$breakpoint2) {
-        padding: 0 7rem;
-    }
+  background-color: lighten(colors.$grey, 45);
+  @media (max-width: variables.$breakpoint) {
+    padding: 1rem;
+  }
+  @media (min-width: variables.$breakpoint) and (max-width: $breakpoint2) {
+    padding: 0 2rem;
+  }
+  @media (min-width: variables.$breakpoint2) {
+    padding: 0 4rem;
+  }
 }
 
 .menu {
-    
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem; 
-    //   animation: menu-appear 0.5s ease-in-out;
-    @media (max-width: variables.$breakpoint) {
-        grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  //   animation: menu-appear 0.5s ease-in-out;
+  @media (max-width: variables.$breakpoint) {
+    grid-template-columns: 1fr;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+    left: 1rem;
+    margin-bottom: 1.5rem;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1.5rem;
+      left: 0;
+      height: 0.25rem;
+      width: 3rem;
+      background-color: colors.$tertiary;
     }
-    h3 {
-        text-transform: uppercase;
-        font-weight: 400;
-        position: relative;
-        margin-bottom: 1rem;
-        &::after {
-            content: "";
-            position: absolute;
-            top: 1.5rem;
-            left: 0;
-            height: 0.25rem;
-            width: 3rem;
-            background-color: colors.$tertiary;
-        }
-    }
+  }
 
-    .menu__category {
+  .menu__category {
+    overflow: hidden;
+    //anim apparence
+    .menu-item {
+      $numberOfItems: 3;
+      @for $i from 1 through $numberOfItems {
+        &:nth-child(#{$i}) {
+          animation: menu-appear 1s;
+          animation-fill-mode: both;
+          animation-delay: 100ms * $i;
+        }
+      }
+      display: flex;
+      background-color: white;
+      border-radius: variables.$dim;
+      margin: 1rem 0.5rem;
+      overflow: hidden;
+      @include mixins.shad;
+
+      .menu-item__price {
+        margin-left: auto;
+        font-weight: 900;
+        padding: variables.$dim;
+        display: flex;
+        align-items: flex-end;
+      }
+      .menu-item__description {
+        padding: 0.5rem;
+        line-height: 1.5rem;
         overflow: hidden;
-        //anim apparence
-        .menu-item {
-            $numberOfItems: 3;
-            @for $i from 1 through $numberOfItems {
-                &:nth-child(#{$i}) {
-                    animation: menu-appear 1s;
-                    animation-fill-mode: both;
-                    animation-delay: 100ms * $i;
-                }
-            }
-            display: flex;
-            background-color: white;
-            border-radius: variables.$dim;
-            margin: 2rem 0.5rem;
-            overflow: hidden;
-            @include mixins.shad;
-            
-            .menu-item__price {
-                margin-left: auto;
-                font-weight: 900;
-                padding: variables.$dim;
-                display: flex;
-                align-items: flex-end;
-            }
-            .menu-item__description {
-                padding: variables.$dim;
-                overflow: hidden;
-                h4,
-                p {
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    }
-
-                }
-                .menu-item__check {
-                    $check-width: 4rem;
-                    display: grid;
-                    place-items: center;
-                    width: $check-width;
-                    flex-shrink: 0;
-                    border-radius: 0 1rem 1rem 0;
-                    background-color: colors.$tertiary;
-                    margin-right: -1 * $check-width;
-                    transition: margin-right 0.5s;
-                    & .fa-check {
-                        $size: 1.2rem;
-                        display: grid;
-                        place-items: center;
-                        color: colors.$tertiary;
-                        background-color: white;
-                        width: $size;
-                        height: $size;
-                        border-radius: $size;
-                    }
-                }              
-                &:hover {
-                    cursor: pointer;
-                    .menu-item__check {
-                    margin-right: 0;
-                    }
-                    .fa-check {
-                        animation: turn-check 0.5s ease-in-out;
-                    }
-                }
-            }       
+        h4,
+        p {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
-    }
-
-.order {
-    height: 30%;
-    display: grid;
-    place-items: center;
-        button {
-            @include buttons.button;
-            transition: 300ms;
-            margin: 2rem 0 4rem 0;
-        &:hover {
-            @include mixins.shad-button;
+        p {
+          font-weight: 300;
         }
+      }
+      .menu-item__check {
+        $check-width: 4rem;
+        display: grid;
+        place-items: center;
+        width: $check-width;
+        flex-shrink: 0;
+        border-radius: 0 1rem 1rem 0;
+        background-color: colors.$tertiary;
+        margin-right: -1 * $check-width;
+        transition: margin-right 0.5s;
+        & .fa-check {
+          $size: 1.2rem;
+          display: grid;
+          place-items: center;
+          color: colors.$tertiary;
+          background-color: white;
+          width: $size;
+          height: $size;
+          border-radius: $size;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        .menu-item__check {
+          margin-right: 0;
+        }
+        .fa-check {
+          animation: turn-check 0.5s ease-in-out;
+        }
+      }
     }
+  }
 }
 
+.order {
+  height: 30%;
+  display: grid;
+  place-items: center;
+  button {
+    @include buttons.button;
+    transition: 300ms;
+    margin: 2rem 0 4rem 0;
+    &:hover {
+      @include mixins.shad-button;
+    }
+  }
+}

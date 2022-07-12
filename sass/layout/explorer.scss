@@ -6,7 +6,7 @@
 
 .explorer {
     text-align: center;
-    background-color: lighten(colors.$grey, 47);
+    background-color: lighten(colors.$grey, 46);
 & h2 {
     padding : 3rem 0 0 0;
     font-size: 1.5rem;
@@ -51,9 +51,9 @@
         width: 7rem;
         border: 5px solid transparent;
        // border-right: 5px solid transparent;
-        border-top: 5px solid colors.$purple;
+        border-top: 5px solid colors.$primary;
        // border-left: 5px solid transparent;
-        border-bottom: 5px solid colors.$pink;
+        border-bottom: 5px solid colors.$secondary;
         border-radius: 50%; // 7rem
         animation: spin $anim-duration infinite ease-in-out; //linear 
         animation-iteration-count: $anim-count;

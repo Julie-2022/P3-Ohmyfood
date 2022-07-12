@@ -6,33 +6,40 @@
 .blockfonction {
     padding-bottom: 2 * variables.$dim;
   h2 {
-    padding-left: 2 * variables.$dim;
+    padding: 3rem 0 1rem 2rem;
     }  
 }
 
 .fonctioning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     column-gap: 2 * variables.$dim;
     & .buttonf {
         @include buttons.buttonf;
         @include mixins.shad;  
        } 
     & .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 2 * variables.$dim;
     /* cercle */
     width: 1.5 * variables.$dim;
     /* bordure */
     height: 1.5 * variables.$dim;
     color: white;
-    background-color: colors.$purple;
+    background-color: colors.$primary;
     margin: 2.5 * variables.$dim 0;
     font-size: variables.$dim ;
     float: left;
     position: absolute;
     border: 1px solid transparent; //*
     }
-& i {
+    & i {
     color: colors.$grey;
-    font-size: 1.2 variables.$dim ;
+    font-size: large;
     padding: 1.5 * variables.$dim 0;
-}
+    }
 }
