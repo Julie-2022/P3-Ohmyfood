@@ -385,19 +385,19 @@ header {
   background-size: cover;
 }
 .card__img-1 {
-  background-image: url(../../img/card-1.jpg);
+  background-image: url(../img/card-1.jpg);
   background-position: center 60%;
 }
 .card__img-2 {
-  background-image: url(../../img/card-2.jpg);
+  background-image: url(../img/card-2.jpg);
   background-position: center 60%;
 }
 .card__img-3 {
-  background-image: url(../../img/card-3.jpg);
+  background-image: url(../img/card-3.jpg);
   background-position: center 60%;
 }
 .card__img-4 {
-  background-image: url(../../img/card-4.jpg);
+  background-image: url(../img/card-4.jpg);
   background-position: center 60%;
 }
 .card__details {
