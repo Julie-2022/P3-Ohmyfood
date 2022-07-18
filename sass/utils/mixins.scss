@@ -56,33 +56,40 @@
   font-weight: $font-weight;
 }
 
-@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
-  @include icon-fontA($font-weight);
-  content: "\f004";
-  font-size: 2rem;
-  right: 0;
-  color: $color;
-  //color: transparent;
-  background-clip: text; // s'utilise avec color: transparent
-  -webkit-background-clip: text; //pour être compatible avec IE
-  opacity: $opacity;
-  transition-property: opacity, bottom, top;
-  transition-duration: 4s;
-  transition-delay: 1s;
-  transition: $opacity 1s ease-in-out;
+@mixin heart {
+  .fa-regular {
+    position: absolute;
+    color: inherit;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -o-transition: color 0.5s;
+  }
+  .fa-solid {
+    //display: inline-block;
+    color: transparent;
+    background-clip: text; // s'utilise avec color: transparent
+    -webkit-background-clip: text; //pour être compatible avec IE
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+  }
 }
 
-@mixin hover-heart($opacity: 1) {
-  //
-  cursor: pointer;
-  opacity: 1;
-  //color: transparent;
-  //transition-property: opacity, bottom, top;
-  transition: $opacity 3s ease-in-out;
-  //transform: scale(0, 0) translate(50%, 50%) ;
-  //transform: scale(1, 1.02);
-  //transition: 3s;
-  animation: heart-opacity 1s;
+@mixin hover-heart {
+  &:hover {
+    .fa-regular {
+      color: transparent;
+    }
+    .fa-solid {
+      display: inline-block;
+      @include gradient;
+      opacity: 1;
+      //animation: heart-opacity 2.5s;
+    }
+  }
 }
 
 //@keyframes heart-opacity {
@@ -95,26 +102,3 @@
 //    opacity: 1;
 //  }
 //}
-
-@keyframes heart-opacity {
-  0% {
-    color: lighten (colors.$gradient, 33);
-    opacity: 0;
-    //transform: translateY(50%);
-  }
-  100% {
-    color: colors.$gradient;
-    opacity: 1;
-    //transform: translateY(0);
-  }
-}
-
-@mixin heart-filled {
-  @include heart;
-  &:hover {
-    @include heart($opacity: 0, $font-weight: 900, $color: transparent);
-    @include hover-heart($opacity: 1);
-    @include gradient;
-    transition: 1s;
-  }
-}

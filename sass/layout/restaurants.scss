@@ -1,6 +1,7 @@
 @use "../utils/colors";
 @use "../utils/variables";
 @use "../utils/mixins";
+@use "../utils/anim";
 
 #homepage {
   @media (max-width: variables.$breakpoint) {
@@ -68,14 +69,13 @@
     &__img-#{$i} {
       background-image: url(../img/card-#{$i}.jpg);
       background-position: center 60%;
-    } // img/card-#{$i}.jpg)
+    }
   }
 
   &__details {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
     height: 25%;
     font-size: large;
     font-weight: 300;
@@ -86,10 +86,13 @@
       line-height: 2rem;
     }
 
-    .fa-thin {
-      bottom: 20px;
-      padding-right: 0;
-      @include mixins.heart-filled;
+    .heart {
+      padding-right: 2rem;
+      font-size: 2rem;
+      position: relative;
+      //  transition: all 2.5s ease;
+      @include mixins.heart;
+      @include mixins.hover-heart;
     }
   }
 }
@@ -111,8 +114,8 @@
   background-color: colors.$tertiary;
   color: darken(colors.$tertiary, 40);
   display: grid;
-  place-items: center;
   right: 1rem;
   top: 1rem;
-  transition: 0.5s;
+  place-items: center;
+  transition: place-items 0.5s;
 }

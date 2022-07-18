@@ -53,9 +53,13 @@
   }
 }
 
-.fa-thin {
-  padding-right: 10%;
-  @include mixins.heart-filled;
+.heart {
+  padding-right: 2rem;
+  font-size: 2rem;
+  position: relative;
+  //  transition: all 2.5s ease;
+  @include mixins.heart;
+  @include mixins.hover-heart;
 }
 
 .restau-main {
