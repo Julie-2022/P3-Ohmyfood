@@ -433,6 +433,7 @@ header {
   padding-right: 2rem;
   font-size: 2rem;
   position: relative;
+  cursor: pointer;
 }
 .card__details .heart .fa-regular {
   position: absolute;
@@ -613,6 +614,7 @@ footer .fa-handshake-angle:before {
   padding-right: 2rem;
   font-size: 2rem;
   position: relative;
+  cursor: pointer;
 }
 .heart .fa-regular {
   position: absolute;

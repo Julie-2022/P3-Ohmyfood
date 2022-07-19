@@ -43,6 +43,7 @@
 }
 
 @mixin heart {
+  cursor: pointer;
   .fa-regular {
     position: absolute;
     color: inherit;
