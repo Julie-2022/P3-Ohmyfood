@@ -14,13 +14,13 @@
     font-weight: lighter;
     color: colors.$grey;
   }
+}
 
-  & button {
-    @include buttons.button;
-    transition: 300ms;
-    &:hover {
-      @include mixins.shad-button;
-    }
+.button {
+  @include buttons.button;
+  transition: 300ms;
+  &:hover {
+    @include mixins.shad-button;
   }
 }
 

@@ -180,7 +180,7 @@
   height: 30%;
   display: grid;
   place-items: center;
-  button {
+  .button {
     @include buttons.button;
     transition: 300ms;
     margin: 2rem 0 4rem 0;

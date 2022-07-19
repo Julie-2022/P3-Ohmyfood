@@ -2,49 +2,46 @@
 @use "../utils/mixins";
 @use "../utils/colors";
 
-
 // Explorer
 @mixin button {
-    color: white;
-    padding: 0 2 * variables.$dim;
-    margin: 1 * variables.$dim 0 3 * variables.$dim 0;
-    border: none;
-    border-radius: 2 * variables.$dim;
-    
-    & p {
-        margin: 1rem 0;
-        font-size: 1 * variables.$dim;
-        font-weight: lighter;
-    }
-    @include mixins.gradient;
-    @include mixins.shad;
-    &:hover {
-        @include mixins.hover-explorer;
-        
-    }
+  display: inline-block;
+  color: white;
+  padding: 0 2 * variables.$dim;
+  margin: 1 * variables.$dim 0 3 * variables.$dim 0;
+  border: none;
+  border-radius: 2 * variables.$dim;
+
+  & p {
+    margin: 1rem 0;
+    font-size: 1 * variables.$dim;
+    font-weight: lighter;
+  }
+  @include mixins.gradient;
+  @include mixins.shad;
+  &:hover {
+    @include mixins.hover-explorer;
+  }
 }
 // Fonctioning
 @mixin buttonf {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.5 * variables.$dim;
-    max-width: 18 * variables.$dim;
-    height: 3.5 * variables.$dim;
-    padding: 0 2 * variables.$dim;
-    margin: 1.5 * variables.$dim 1 * variables.$dim;
-    border: 1px solid transparent;
-    border-radius: 1 * variables.$dim;
-    background-color: #F6F6F6;
-    transition: 300ms;
-    @include mixins.shad;   
-    &:hover {
-        @include mixins.hover-light;
-        @include mixins.shad-light;
-        i::before {
-            color: colors.$primary;
-        }
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5 * variables.$dim;
+  max-width: 18 * variables.$dim;
+  height: 3.5 * variables.$dim;
+  padding: 0 2 * variables.$dim;
+  margin: 1.5 * variables.$dim 1 * variables.$dim;
+  border: 1px solid transparent;
+  border-radius: 1 * variables.$dim;
+  background-color: #f6f6f6;
+  transition: 300ms;
+  @include mixins.shad;
+  &:hover {
+    @include mixins.hover-light;
+    @include mixins.shad-light;
+    i::before {
+      color: colors.$primary;
     }
+  }
 }
-
-

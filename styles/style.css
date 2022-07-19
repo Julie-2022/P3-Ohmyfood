@@ -164,7 +164,9 @@ header {
   font-weight: lighter;
   color: #7E7E7E;
 }
-.explorer button {
+
+.button {
+  display: inline-block;
   color: white;
   padding: 0 2rem;
   margin: 1rem 0 3rem 0;
@@ -174,18 +176,18 @@ header {
   box-shadow: 2px 2px 7px 0px rgba(179, 179, 179, 0.9);
   transition: 300ms;
 }
-.explorer button p {
+.button p {
   margin: 1rem 0;
   font-size: 1rem;
   font-weight: lighter;
 }
-.explorer button:hover {
+.button:hover {
   cursor: pointer;
   transform: scale(1, 1.05) translateY(0);
   opacity: 0.7;
   transition: 300ms;
 }
-.explorer button:hover {
+.button:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   transition: 300ms;
 }
@@ -239,7 +241,7 @@ header {
   margin: 1.5rem 1rem;
   border: 1px solid transparent;
   border-radius: 1rem;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   transition: 300ms;
   box-shadow: 2px 2px 7px 0px rgba(179, 179, 179, 0.9);
   box-shadow: 2px 2px 7px 0px rgba(179, 179, 179, 0.9);
@@ -777,7 +779,8 @@ footer .fa-handshake-angle:before {
   display: grid;
   place-items: center;
 }
-.order button {
+.order .button {
+  display: inline-block;
   color: white;
   padding: 0 2rem;
   margin: 1rem 0 3rem 0;
@@ -788,18 +791,18 @@ footer .fa-handshake-angle:before {
   transition: 300ms;
   margin: 2rem 0 4rem 0;
 }
-.order button p {
+.order .button p {
   margin: 1rem 0;
   font-size: 1rem;
   font-weight: lighter;
 }
-.order button:hover {
+.order .button:hover {
   cursor: pointer;
   transform: scale(1, 1.05) translateY(0);
   opacity: 0.7;
   transition: 300ms;
 }
-.order button:hover {
+.order .button:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   transition: 300ms;
 }
