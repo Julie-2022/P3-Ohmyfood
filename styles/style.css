@@ -152,7 +152,6 @@ header {
     opacity: 1;
   }
 }
-/* Zone Explorer */
 .explorer {
   text-align: center;
   background-color: #f3f3f3;
@@ -328,7 +327,7 @@ header {
     padding: 0;
   }
 }
-@media all and (min-width: 1000px) and (max-width: 1440px) {
+@media (min-width: 1000px) and (max-width: 1440px) {
   #homepage {
     padding: 0 4rem;
   }
@@ -609,14 +608,18 @@ footer .fa-handshake-angle:before {
   font-family: "Shrikhand", "cursive";
   padding: 2rem;
 }
-
-.heart {
+@media (min-width: 1440px) {
+  .restau-head h2 {
+    margin-left: 3rem;
+  }
+}
+.restau-head .heart {
   padding-right: 2rem;
   font-size: 2rem;
   position: relative;
   cursor: pointer;
 }
-.heart .fa-regular {
+.restau-head .heart .fa-regular {
   position: absolute;
   color: inherit;
   transition: color 0.5s;
@@ -624,7 +627,7 @@ footer .fa-handshake-angle:before {
   -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
 }
-.heart .fa-solid {
+.restau-head .heart .fa-solid {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -634,13 +637,18 @@ footer .fa-handshake-angle:before {
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
 }
-.heart:hover .fa-regular {
+.restau-head .heart:hover .fa-regular {
   color: transparent;
 }
-.heart:hover .fa-solid {
+.restau-head .heart:hover .fa-solid {
   display: inline-block;
   background-image: linear-gradient(to right top, #9356DC, #FF79DA);
   opacity: 1;
+}
+@media (min-width: 1440px) {
+  .restau-head .heart {
+    margin-right: 3rem;
+  }
 }
 
 .restau-main {

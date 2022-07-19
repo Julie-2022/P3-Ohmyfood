@@ -1,5 +1,4 @@
 @use "../utils/anim";
-/* Zone Explorer */
 @use "../utils/colors";
 @use "../utils/mixins";
 @use "../components/buttons";
@@ -50,12 +49,10 @@
     height: 7rem;
     width: 7rem;
     border: 5px solid transparent;
-    // border-right: 5px solid transparent;
     border-top: 5px solid colors.$primary;
-    // border-left: 5px solid transparent;
     border-bottom: 5px solid colors.$secondary;
-    border-radius: 50%; // 7rem
-    animation: spin $anim-duration infinite ease-in-out; //linear
+    border-radius: 50%;
+    animation: spin $anim-duration infinite ease-in-out;
     animation-iteration-count: $anim-count;
   }
 }

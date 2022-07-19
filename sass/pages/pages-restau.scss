@@ -48,15 +48,20 @@
   h2 {
     font-family: "Shrikhand", "cursive";
     padding: 2rem;
+    @media (min-width: variables.$breakpoint2) {
+      margin-left: 3rem;
+    }
   }
-}
-
-.heart {
-  padding-right: 2rem;
-  font-size: 2rem;
-  position: relative;
-  @include mixins.heart;
-  @include mixins.hover-heart;
+  .heart {
+    padding-right: 2rem;
+    font-size: 2rem;
+    position: relative;
+    @include mixins.heart;
+    @include mixins.hover-heart;
+    @media (min-width: variables.$breakpoint2) {
+      margin-right: 3rem;
+    }
+  }
 }
 
 .restau-main {

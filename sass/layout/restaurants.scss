@@ -7,7 +7,7 @@
   @media (max-width: variables.$breakpoint) {
     padding: 0;
   }
-  @media all and (min-width: variables.$breakpoint) and (max-width: $breakpoint2) {
+  @media (min-width: variables.$breakpoint) and (max-width: $breakpoint2) {
     padding: 0 4rem;
   }
   @media (min-width: variables.$breakpoint2) {
@@ -49,7 +49,6 @@
   border-radius: 1rem;
   transition: 0.5s;
   @include mixins.shad;
-
   &:hover {
     @include mixins.hover-card;
     @media (min-width: variables.$breakpoint3) {
@@ -64,14 +63,12 @@
     border-radius: 1rem 1rem 0 0;
     background-size: cover;
   }
-
   @for $i from 1 through 4 {
     &__img-#{$i} {
       background-image: url(../img/card-#{$i}.jpg);
       background-position: center 60%;
     }
   }
-
   &__details {
     display: flex;
     justify-content: space-between;
@@ -85,7 +82,6 @@
       font-size: larger;
       line-height: 2rem;
     }
-
     .heart {
       padding-right: 2rem;
       font-size: 2rem;
