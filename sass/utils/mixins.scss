@@ -40,20 +40,6 @@
     colors.$primary,
     colors.$secondary
   );
-  // transition: 1500ms;
-  // animation: heart 5s ease forwards;
-  // transition: 5s;
-}
-
-@mixin icon-fontA($font-weight: 400) {
-  position: absolute;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 6 Free";
-  font-weight: $font-weight;
 }
 
 @mixin heart {
@@ -71,10 +57,10 @@
     background-clip: text; // s'utilise avec color: transparent
     -webkit-background-clip: text; //pour être compatible avec IE
     opacity: 0;
-    transition: opacity 2s ease-in-out;
-    -webkit-transition: opacity 2s ease-in-out;
-    -moz-transition: opacity 2s ease-in-out;
-    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
   }
 }
 
@@ -87,7 +73,7 @@
       display: inline-block;
       @include gradient;
       opacity: 1;
-      //animation: heart-opacity 2.5s;
+      //animation: heart-opacity 2s;
     }
   }
 }

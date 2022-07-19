@@ -6,9 +6,7 @@
 
 #page-restau {
   header {
-    &::before {
-      @include mixins.icon-fontA($font-weight: 900);
-      content: "\f060";
+    .fa-arrow-left {
       font-size: x-large;
       left: 10%;
       top: 3rem;
@@ -18,10 +16,10 @@
       @media (max-width: variables.$breakpoint) {
         left: 5%;
       }
-    }
-    &:hover::before {
-      font-size: 1.7rem;
-      @include mixins.hover-explorer($transformScale: translateY(-50%));
+      &:hover {
+        font-size: 1.7rem;
+        @include mixins.hover-explorer($transformScale: translateY(-50%));
+      }
     }
   }
 }
@@ -57,7 +55,6 @@
   padding-right: 2rem;
   font-size: 2rem;
   position: relative;
-  //  transition: all 2.5s ease;
   @include mixins.heart;
   @include mixins.hover-heart;
 }

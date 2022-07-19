@@ -200,7 +200,7 @@ header {
   height: 100vh;
   inset: 0;
   z-index: 1;
-  animation: loader-stop 1s 4s forwards;
+  animation: loader-stop 1s 3s forwards;
   transform-origin: center;
 }
 .loader::after {
@@ -211,7 +211,7 @@ header {
   border-top: 5px solid #9356DC;
   border-bottom: 5px solid #FF79DA;
   border-radius: 50%;
-  animation: spin 1s infinite ease-in-out;
+  animation: spin 0.75s infinite ease-in-out;
   animation-iteration-count: 4;
 }
 
@@ -447,10 +447,10 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: opacity 2s ease-in-out;
-  -webkit-transition: opacity 2s ease-in-out;
-  -moz-transition: opacity 2s ease-in-out;
-  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
 }
 .card__details .heart:hover .fa-regular {
   color: transparent;
@@ -559,16 +559,7 @@ footer .fa-handshake-angle:before {
     opacity: 1;
   }
 }
-#page-restau header::before {
-  position: absolute;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  content: "\f060";
+#page-restau header .fa-arrow-left {
   font-size: x-large;
   left: 10%;
   top: 3rem;
@@ -577,11 +568,11 @@ footer .fa-handshake-angle:before {
   transition: transform 0.5s;
 }
 @media (max-width: 1000px) {
-  #page-restau header::before {
+  #page-restau header .fa-arrow-left {
     left: 5%;
   }
 }
-#page-restau header:hover::before {
+#page-restau header .fa-arrow-left:hover {
   font-size: 1.7rem;
   cursor: pointer;
   transform: scale(1, 1.05) translateY(-50%);
@@ -636,10 +627,10 @@ footer .fa-handshake-angle:before {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: opacity 2s ease-in-out;
-  -webkit-transition: opacity 2s ease-in-out;
-  -moz-transition: opacity 2s ease-in-out;
-  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
 }
 .heart:hover .fa-regular {
   color: transparent;
