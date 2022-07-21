@@ -179,7 +179,7 @@ header {
 .button p {
   margin: 1rem 0;
   font-size: 1rem;
-  font-weight: lighter;
+  font-weight: 400;
 }
 .button:hover {
   cursor: pointer;
@@ -422,7 +422,6 @@ header {
   font-size: large;
   font-weight: 300;
   padding-left: 1rem;
-  position: relative;
 }
 @media (min-width: 1440px) {
   .card__details {
@@ -433,34 +432,27 @@ header {
 .card__details .heart {
   padding-right: 2rem;
   font-size: 2rem;
-  position: relative;
+  display: flex;
   cursor: pointer;
 }
 .card__details .heart .fa-regular {
   position: absolute;
   color: inherit;
-  transition: color 0.5s;
-  -webkit-transition: color 0.5s;
-  -moz-transition: color 0.5s;
-  -o-transition: color 0.5s;
 }
 .card__details .heart .fa-solid {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  position: relative;
   opacity: 0;
+}
+.card__details .heart:hover .fa-solid {
+  background-image: linear-gradient(to right top, #9356DC, #FF79DA);
+  opacity: 1;
   transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
-}
-.card__details .heart:hover .fa-regular {
-  color: transparent;
-}
-.card__details .heart:hover .fa-solid {
-  display: inline-block;
-  background-image: linear-gradient(to right top, #9356DC, #FF79DA);
-  opacity: 1;
 }
 
 .name {
@@ -619,33 +611,27 @@ footer .fa-handshake-angle:before {
   padding-right: 2rem;
   font-size: 2rem;
   position: relative;
+  display: flex;
   cursor: pointer;
 }
 .restau-head .heart .fa-regular {
   position: absolute;
   color: inherit;
-  transition: color 0.5s;
-  -webkit-transition: color 0.5s;
-  -moz-transition: color 0.5s;
-  -o-transition: color 0.5s;
 }
 .restau-head .heart .fa-solid {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  position: relative;
   opacity: 0;
+}
+.restau-head .heart:hover .fa-solid {
+  background-image: linear-gradient(to right top, #9356DC, #FF79DA);
+  opacity: 1;
   transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
-}
-.restau-head .heart:hover .fa-regular {
-  color: transparent;
-}
-.restau-head .heart:hover .fa-solid {
-  display: inline-block;
-  background-image: linear-gradient(to right top, #9356DC, #FF79DA);
-  opacity: 1;
 }
 @media (min-width: 1440px) {
   .restau-head .heart {
@@ -794,7 +780,7 @@ footer .fa-handshake-angle:before {
 .order .button p {
   margin: 1rem 0;
   font-size: 1rem;
-  font-weight: lighter;
+  font-weight: 400;
 }
 .order .button:hover {
   cursor: pointer;

@@ -14,7 +14,7 @@
   & p {
     margin: 1rem 0;
     font-size: 1 * variables.$dim;
-    font-weight: lighter;
+    font-weight: 400;
   }
   @include mixins.gradient;
   @include mixins.shad;

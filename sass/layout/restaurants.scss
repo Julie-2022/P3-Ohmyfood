@@ -77,7 +77,7 @@
     font-size: large;
     font-weight: 300;
     padding-left: 1rem;
-    position: relative;
+    //position: relative;
     @media (min-width: variables.$breakpoint2) {
       font-size: larger;
       line-height: 2rem;
@@ -85,7 +85,7 @@
     .heart {
       padding-right: 2rem;
       font-size: 2rem;
-      position: relative;
+      //position: relative;
       //  transition: all 2.5s ease;
       @include mixins.heart;
       @include mixins.hover-heart;
