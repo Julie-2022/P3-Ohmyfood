@@ -671,6 +671,11 @@ footer .fa-handshake-angle:before {
   animation-fill-mode: both;
   animation-delay: 300ms;
 }
+.menu .menu__category .menu-item:nth-child(4) {
+  animation: menu-appear 1s;
+  animation-fill-mode: both;
+  animation-delay: 400ms;
+}
 .menu .menu__category .menu-item .menu-item__price {
   margin-left: auto;
   font-weight: 900;

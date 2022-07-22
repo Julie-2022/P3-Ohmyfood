@@ -106,7 +106,7 @@
     //anim apparence
     overflow: hidden;
     .menu-item {
-      $numberOfItems: 3;
+      $numberOfItems: 4;
       @for $i from 1 through $numberOfItems {
         &:nth-child(#{$i}) {
           animation: menu-appear 1s;
