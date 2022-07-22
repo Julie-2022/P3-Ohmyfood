@@ -4,8 +4,11 @@
 @use "../components/buttons";
 
 .explorer {
+  display: flex;
+  justify-content: center;
   text-align: center;
   background-color: lighten(colors.$grey, 46);
+  padding-bottom: 3rem;
   & h2 {
     padding: 3rem 0 0 0;
     font-size: 1.5rem;
@@ -14,13 +17,12 @@
     font-weight: lighter;
     color: colors.$grey;
   }
-}
-
-.button {
-  @include buttons.button;
-  transition: 300ms;
-  &:hover {
-    @include mixins.shad-button;
+  & .button {
+    @include buttons.button;
+    transition: 300ms;
+    &:hover {
+      @include mixins.shad-button;
+    }
   }
 }
 
@@ -28,7 +30,7 @@
 
 .loader {
   $anim-duration: 0.75s;
-  $anim-count: 4;
+  $anim-count: 3;
   position: fixed;
   display: grid;
   place-items: center;
@@ -36,11 +38,11 @@
   height: 100vh;
   inset: 0; // = margin: 0
   z-index: 1;
-  animation: loader-stop 1s $anim-duration * $anim-count forwards; // duration timing-function delay iteration-count direction fill-mode;
+  animation: loader-stop 1s $anim-duration * $anim-count forwards;
+  // duration timing-function delay iteration-count direction fill-mode;
   //animation-fill-mode: forwards;
   //animation-delay: $anim-count * $anim-duration;
-  transform-origin: center; //  top
-
+  transform-origin: center;
   // avec icon :
   //  i {animation: spin 3s infinite linear;}
   // sans icon :

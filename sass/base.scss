@@ -8,24 +8,12 @@
 }
 
 /* Police Logo + titres */
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-}
-
-main {
-  margin: 0;
-}
-
-h2 {
-  margin: 0;
-}
-
-h4 {
-  margin: 0;
-}
-
+body,
+main,
+h2,
+h4,
 p {
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 

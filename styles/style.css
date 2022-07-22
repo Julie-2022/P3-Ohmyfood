@@ -39,14 +39,6 @@
     transform: rotate(360deg);
   }
 }
-@keyframes heart-opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 *,
 ::before,
 ::after {
@@ -54,24 +46,12 @@
 }
 
 /* Police Logo + titres */
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-}
-
-main {
-  margin: 0;
-}
-
-h2 {
-  margin: 0;
-}
-
-h4 {
-  margin: 0;
-}
-
+body,
+main,
+h2,
+h4,
 p {
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
@@ -144,17 +124,12 @@ header {
     transform: rotate(360deg);
   }
 }
-@keyframes heart-opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .explorer {
+  display: flex;
+  justify-content: center;
   text-align: center;
   background-color: #f3f3f3;
+  padding-bottom: 3rem;
 }
 .explorer h2 {
   padding: 3rem 0 0 0;
@@ -164,30 +139,31 @@ header {
   font-weight: lighter;
   color: #7E7E7E;
 }
-
-.button {
-  display: inline-block;
-  color: white;
+.explorer .button {
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  margin: auto;
   padding: 0 2rem;
-  margin: 1rem 0 3rem 0;
+  color: white;
   border: none;
   border-radius: 2rem;
   background-image: linear-gradient(to right top, #9356DC, #FF79DA);
   box-shadow: 2px 2px 7px 0px rgba(179, 179, 179, 0.9);
   transition: 300ms;
 }
-.button p {
+.explorer .button p {
   margin: 1rem 0;
   font-size: 1rem;
   font-weight: 400;
 }
-.button:hover {
+.explorer .button:hover {
   cursor: pointer;
   transform: scale(1, 1.05) translateY(0);
   opacity: 0.7;
   transition: 300ms;
 }
-.button:hover {
+.explorer .button:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   transition: 300ms;
 }
@@ -201,7 +177,7 @@ header {
   height: 100vh;
   inset: 0;
   z-index: 1;
-  animation: loader-stop 1s 3s forwards;
+  animation: loader-stop 1s 2.25s forwards;
   transform-origin: center;
 }
 .loader::after {
@@ -213,7 +189,7 @@ header {
   border-bottom: 5px solid #FF79DA;
   border-radius: 50%;
   animation: spin 0.75s infinite ease-in-out;
-  animation-iteration-count: 4;
+  animation-iteration-count: 3;
 }
 
 .blockfonction {
@@ -314,14 +290,6 @@ header {
 @keyframes spin {
   to {
     transform: rotate(360deg);
-  }
-}
-@keyframes heart-opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @media (max-width: 1000px) {
@@ -545,14 +513,6 @@ footer .fa-handshake-angle:before {
     transform: rotate(360deg);
   }
 }
-@keyframes heart-opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 #page-restau header .fa-arrow-left {
   font-size: x-large;
   left: 10%;
@@ -662,6 +622,7 @@ footer .fa-handshake-angle:before {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  padding-bottom: 1rem;
 }
 @media (max-width: 1000px) {
   .menu {
@@ -761,21 +722,20 @@ footer .fa-handshake-angle:before {
 }
 
 .order {
-  height: 30%;
-  display: grid;
-  place-items: center;
+  padding-bottom: 3rem;
 }
 .order .button {
-  display: inline-block;
-  color: white;
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  margin: auto;
   padding: 0 2rem;
-  margin: 1rem 0 3rem 0;
+  color: white;
   border: none;
   border-radius: 2rem;
   background-image: linear-gradient(to right top, #9356DC, #FF79DA);
   box-shadow: 2px 2px 7px 0px rgba(179, 179, 179, 0.9);
   transition: 300ms;
-  margin: 2rem 0 4rem 0;
 }
 .order .button p {
   margin: 1rem 0;

@@ -81,7 +81,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  //   animation: menu-appear 0.5s ease-in-out;
+  padding-bottom: 1rem;
   @media (max-width: variables.$breakpoint) {
     grid-template-columns: 1fr;
   }
@@ -103,8 +103,8 @@
   }
 
   .menu__category {
-    overflow: hidden;
     //anim apparence
+    overflow: hidden;
     .menu-item {
       $numberOfItems: 3;
       @for $i from 1 through $numberOfItems {
@@ -120,7 +120,6 @@
       margin: 1rem 0.5rem;
       overflow: hidden;
       @include mixins.shad;
-
       .menu-item__price {
         margin-left: auto;
         font-weight: 900;
@@ -177,13 +176,10 @@
 }
 
 .order {
-  height: 30%;
-  display: grid;
-  place-items: center;
+  padding-bottom: 3rem;
   .button {
     @include buttons.button;
     transition: 300ms;
-    margin: 2rem 0 4rem 0;
     &:hover {
       @include mixins.shad-button;
     }

@@ -46,16 +46,3 @@
     transform: rotate(360deg);
   }
 }
-
-@keyframes heart-opacity {
-  0% {
-    //color: lighten (colors.$gradient, 33);
-    opacity: 0;
-    //transform: translateY(50%);
-  }
-  100% {
-    //color: colors.$gradient;
-    opacity: 1;
-    //transform: translateY(0);
-  }
-}
